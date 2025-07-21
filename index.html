@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Track real-time Zambian Kwacha exchange rates from every major bank">
+  <title>Kwacha Monitor – Live Zambian Exchange Rates</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #005a87;
+      --primary-dark: #005f8d;
+      --text: #222;
+      --text-light: #444;
+      --bg: #f9fbfc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* Navigation Bar */
+    nav {
+      width: 100%;
+      padding: 1rem clamp(1rem, 5vw, 4rem);
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo-link:hover {
+      color: var(--primary);
+      /* Or your preferred hover color */
+    }
+
+    .nav-left img {
+      height: 36px;
+      width: 36px;
+      aspect-ratio: 1;
+    }
+
+    .nav-left span {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--text);
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 6rem 1rem 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: clamp(1rem, 2.5vw, 1.05rem);
+      max-width: 42ch;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: min(280px, 90vw);
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .cta-buttons a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--primary);
+      color: var(--white);
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+
+    .cta-buttons a:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+        text-align: left;
+        padding: 6rem clamp(2rem, 8vw, 6rem) 2rem;
+      }
+
+      .content {
+        flex: 1;
+        padding-right: 2rem;
+      }
+
+      .hero-image {
+        flex: 1;
+        max-width: min(300px, 40vw);
+        margin-bottom: 0;
+      }
+
+      .cta-buttons {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    .spaco {
+      margin-bottom: 90px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-left">
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="Kwacha Monitor Logo" width="36" height="36" loading="lazy" />
+        <span>Kwacha Monitor</span>
+      </a>
+    </div>
+    <div class="nav-links space">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="content">
+      <h1>Kwacha Monitor</h1>
+      <p>Track real-time Zambian Kwacha exchange rates from every major bank — fast, accurate, and always in your
+        pocket.</p>
+      <div class="cta-buttons">
+        <a href="#" aria-label="Download on Google Play">Get it on Google Play</a>
+        <a href="#" aria-label="Download for Windows">Download for Windows</a>
+      </div>
+    </div>
+    <img src="app.png" alt="Kwacha Monitor mobile app screenshot" class="hero-image" width="280" height="560"
+      loading="eager" />
+  </main>
+</body>
+
+</html>
