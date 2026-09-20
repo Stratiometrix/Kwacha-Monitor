@@ -4,11 +4,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Privacy Policy for Kwacha Monitor - We don't collect any user data">
   <title>Privacy Policy | Kwacha Monitor</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description"
+    content="Kwacha Monitor collects no personal data. No accounts, no analytics, no advertising and no tracking. Read exactly what the app does and does not do." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://kwacha.nserge05.workers.dev/privacy" />
+
+  <!-- Tab icon and mobile browser chrome -->
+  <meta name="theme-color" content="#005a87" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Link previews when the page is shared -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Kwacha Monitor" />
+  <meta property="og:locale" content="en_ZM" />
+  <meta property="og:title" content="Privacy Policy | Kwacha Monitor" />
+  <meta property="og:description"
+    content="Kwacha Monitor collects no personal data. No accounts, no analytics, no advertising and no tracking." />
+  <meta property="og:url" content="https://kwacha.nserge05.workers.dev/privacy" />
+  <meta property="og:image" content="https://kwacha.nserge05.workers.dev/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Inter is self-hosted, so the page makes no third-party requests -->
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="fonts.css" />
   <style>
     :root {
       --primary: #005a87;
@@ -166,9 +188,35 @@
       border-top: 1px solid var(--border);
     }
 
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    footer a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Small screens used to hide .nav-links entirely, leaving no route back to the
+       home page. Tighten the nav instead of removing it. */
     @media (max-width: 600px) {
       .nav-links {
-        display: none;
+        gap: 1rem;
+      }
+
+      .nav-links a {
+        font-size: 0.9rem;
+      }
+
+      .nav-left span {
+        font-size: 1rem;
       }
 
       .container {
@@ -188,7 +236,7 @@
       <span>Kwacha Monitor</span>
     </a>
   </div>
-  <div class="nav-links space">
+  <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="privacy.html">Privacy</a>
   </div>
@@ -198,41 +246,56 @@
   <main>
     <div class="container">
       <h1>Privacy Policy</h1>
-      <p><strong>Effective Date:</strong> July 21, 2025</p>
+      <p><strong>Effective date:</strong> 20 September 2026</p>
 
-      <p>Thank you for using Kwacha Monitor. We are committed to protecting your privacy.</p>
+      <p>This policy covers the <strong>Kwacha Monitor</strong> Android application and this website.</p>
 
-      <h2>1. No Data Collection</h2>
-      <p>We do <strong>not collect</strong>, store, or transmit any personal or non-personal data from users of this
-        app.</p>
+      <h2>1. Summary</h2>
+      <p>Kwacha Monitor shows Zambian Kwacha exchange rates published by commercial banks. There are no accounts, no
+        sign-in, and no personal details to hand over. Nothing that identifies you is collected or stored.</p>
 
-      <h2>2. No Data Sharing</h2>
-      <p>Since we do not collect any data, we do <strong>not share</strong> any data with third parties.</p>
+      <h2>2. Information we do not collect</h2>
+      <p>We do not collect your name, email address, phone number, contacts, location, photos, files, device
+        identifiers, or advertising ID. The app never asks for any of it and has no facility to send it.</p>
 
-      <h2>3. No Analytics or Tracking</h2>
-      <p>This app does <strong>not use</strong> analytics tools, cookies, advertising frameworks, or tracking services.
-      </p>
+      <h2>3. No analytics, advertising or tracking</h2>
+      <p>The app contains no analytics SDKs, no advertising frameworks, no tracking pixels and no cookies. We do not
+        build a profile of you or your usage, and we do not sell or share data — there is none to share.</p>
 
-      <h2>4. Internet Access</h2>
-      <p>The app requires internet access to fetch real-time exchange rates from publicly available sources. This
-        process does <strong>not involve</strong> collecting or transmitting any user-related data.</p>
+      <h2>4. What the app sends over the network</h2>
+      <p>The app needs an internet connection for one purpose: to request current exchange rates and receive them. That
+        request carries no information about you or your device. The only thing held on our side is the public market
+        data itself, which is identical for every user.</p>
 
-      <h2>5. Children's Privacy</h2>
-      <p>This app does <strong>not target children</strong> and does not collect any information from users of any age.
-      </p>
+      <h2>5. Third parties</h2>
+      <p>The app is distributed through Google Play, and Google's own privacy policy governs the store, the download and
+        any store analytics. We receive only aggregate, anonymised figures such as install counts.</p>
+      <p>Exchange rates are gathered by our own service from the banks' public web pages and served to the app as plain
+        data. No third party receives information about you through the app.</p>
 
-      <h2>6. Policy Changes</h2>
-      <p>We may update this privacy policy occasionally. Any changes will be posted here with an updated effective date.
-      </p>
+      <h2>6. Children's privacy</h2>
+      <p>The app is not directed at children. Because no data is collected from anyone, none is collected from children
+        either.</p>
+
+      <h2>7. Security</h2>
+      <p>We hold no personal data, so there is no user information that could be exposed in a breach.</p>
+
+      <h2>8. Changes to this policy</h2>
+      <p>If this policy changes, the new version will be posted here and the effective date above updated. Continuing to
+        use the app after a change means you accept the updated policy.</p>
 
       <div class="contact-info">
-        <h2>Contact Us</h2>
-        <p>If you have any questions about this privacy policy, please contact the developer at:</p>
+        <h2>Contact us</h2>
+        <p>Questions about this policy, or about privacy while using the app, can go to:</p>
         <p><strong>Serge Nalishiwa</strong><br />
           Email: <a href="mailto:nserge05@yahoo.com">nserge05@yahoo.com</a></p>
       </div>
     </div>
   </main>
+
+  <footer>
+    <p>&copy; 2026 Kwacha Monitor &middot; <a href="index.html">Home</a></p>
+  </footer>
 </body>
 
 </html>
