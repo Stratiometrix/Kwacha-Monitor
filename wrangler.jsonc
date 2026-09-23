@@ -1,0 +1,40 @@
+{
+  // Cloudflare Workers configuration for the Kwacha Monitor marketing site.
+  //
+  // The site is pure static assets - there is no Worker script - so this file is the
+  // entire deployment. Publish with:
+  //
+  //   npx wrangler deploy
+  //
+  // (run from this folder; the Worker is named `kwacha` so a deploy updates the existing
+  // one rather than creating a second.)
+  //
+  // https://developers.cloudflare.com/workers/static-assets/
+
+  "name": "kwacha",
+  "compatibility_date": "2026-09-23",
+
+  // Keep serving on kwacha.nserge05.workers.dev as well as the custom domains, so existing
+  // links (and any Play listing field that still points at the old host) keep working.
+  "workers_dev": true,
+
+  // Off by default: preview deployments would otherwise be reachable at an unlisted
+  // *-kwacha.nserge05.workers.dev URL. Flip to true when a preview is wanted.
+  "preview_urls": false,
+
+  "assets": {
+    "directory": ".",
+    // `/` -> index.html and `/privacy` -> privacy.html, while `/privacy.html` 307-redirects
+    // to the clean URL - the behaviour the site had before this config existed.
+    "html_handling": "auto-trailing-slash",
+    // Unknown paths return a bare 404, matching the previous deployment.
+    "not_found_handling": "none"
+  },
+
+  // Custom domains: Cloudflare creates the DNS records itself, so nothing has to be
+  // added to the zone by hand. Requires the zone and this Worker to be in the same account.
+  "routes": [
+    { "pattern": "kwachawatcher.com", "custom_domain": true },
+    { "pattern": "www.kwachawatcher.com", "custom_domain": true }
+  ]
+}

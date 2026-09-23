@@ -1,0 +1,16 @@
+{
+  "name": "kwacha-monitor-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kwacha Monitor marketing site - static assets served by the `kwacha` Cloudflare Worker",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4.136.3"
+  }
+}

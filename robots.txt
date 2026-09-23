@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kwacha.nserge05.workers.dev/sitemap.xml
+Sitemap: https://kwachawatcher.com/sitemap.xml

@@ -1,0 +1,17 @@
+# Files excluded from the Workers static-assets upload.
+# Same syntax as .gitignore. This file itself is never served.
+
+.git
+.github
+.gitattributes
+
+# Local tooling. `.wrangler/` holds build scratch files (a stale no-op-worker.js from a
+# previous deploy was being served at /.wrangler/tmp/... until this line existed).
+.wrangler
+node_modules
+
+# Build/deploy config is not part of the website.
+wrangler.jsonc
+package.json
+package-lock.json
+.gitignore

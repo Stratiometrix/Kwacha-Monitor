@@ -1,0 +1,5 @@
+# Local tooling, not website content.
+node_modules/
+.wrangler/
+
+# .assetsignore is checked in on purpose: it decides which files reach the Worker.
